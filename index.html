@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studio de Tatuagem - Arte na Pele. Realizamos tatuagens personalizadas com qualidade e segurança. Agende sua consulta com nossos profissionais.">
+    <meta name="author" content="Studio de Tatuagem">
+    <title>Studio de Tatuagem - Arte na Pele</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+     <!-- Link para o Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+<header class="header">
+    <!-- Logo -->
+    <div class="logo">
+        <a href="#home" aria-label="Voltar para a página inicial">
+            <img src="imagens/logoatr.png" alt="Logo do Studio de Tatuagem - Arte na Pele" class="logo-img">
+        </a>
+    </div>
+    
+    <!-- Navegação -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Menu Hamburguer (apenas em telas pequenas) -->
+    <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</header>
+
+    
+
+    <!-- Seção Início -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Transforme suas Ideias em Arte</h1>
+            <p>Agende sua tatuagem conosco e leve a arte para a sua pele.</p>
+            <a href="https://wa.me/19982118384?text=Ol%C3%A1%2C%20queria%20fazer%20um%20or%C3%A7amento%20de%20tatuagem%20com%20voc%C3%AA" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">Agendar no WhatsApp</a>
+        </div>
+    </section>
+    
+
+    <!-- Seção Biografia -->
+<section id="biografia">
+    <h2>Conheça os Profissionais</h2>
+    <div class="biografia-container">
+        <!-- Biografia do Tatuador -->
+        <div class="biografia-tatuador" onclick="toggleBio('bio-tatuador')">
+            <div class="biografia-foto">
+                <img src="imagens/arthur.png" alt="Arthur ATR - Tatuador" class="foto-tatuador">
+            </div>
+            <div class="biografia-texto" id="bio-tatuador">
+                <h3>Arthur ATR</h3>
+                <p>Com mais de 10 anos de experiência no mundo das tatuagens, Arthur ATR é conhecido por seu estilo único e detalhado. Ele é especializado em tatuagens realistas e personalizadas, criando peças de arte exclusivas para cada cliente.</p>
+                <p>Arthur tem um compromisso com a segurança e qualidade, utilizando apenas os melhores materiais e técnicas modernas. Ele adora trabalhar com seus clientes para transformar suas ideias em uma obra-prima única na pele.</p>
+            </div>
+        </div>
+
+        <!-- Biografia do Body Piercing -->
+        <div class="biografia-piercing" onclick="toggleBio('bio-piercer')">
+            <div class="biografia-foto">
+                <img src="imagens/larissa.png" alt="Nome do Profissional - Body Piercer" class="foto-piercer">
+            </div>
+            <div class="biografia-texto" id="bio-piercer">
+                <h3>Larissa</h3>
+                <p>Com mais de X anos de experiência, [Nome do Profissional] é um especialista em body piercing, conhecido por sua técnica refinada e dedicação à segurança e bem-estar dos clientes. Ele/ela começou sua jornada no mundo dos piercings há muitos anos e se apaixonou pela arte de transformar o corpo com piercings personalizados.</p>
+                <p>Com uma abordagem que prioriza a higiene, a escolha dos melhores materiais e o respeito ao desejo do cliente, [Nome do Profissional] se dedica a transformar cada experiência em algo único, sempre com foco na saúde e segurança de todos os clientes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Seção Galeria -->
+<section id="galeria">
+    <h2>Galeria de Tatuagens</h2>
+    <div class="galeria-container">
+        <div class="galeria-carousel">
+            <div class="galeria-imagem">
+                <img src="imagens/tatuagem1.jpg" alt="Tatuagem de estilo realista">
+            </div>
+            <div class="galeria-imagem">
+                <img src="imagens/tatuagem2.jpg" alt="Tatuagem de estilo geométrico">
+            </div>
+            <div class="galeria-imagem">
+                <img src="imagens/tatuagem3.jpg" alt="Tatuagem de estilo colorido">
+            </div>
+            <div class="galeria-imagem instagram-image">
+                <a href="https://www.instagram.com/atrtattoopiercing/" target="_blank">
+                    <img src="imagens/tatuagem4.jpg" alt="Tatuagem de estilo minimalista">
+                    <span>Veja mais no Instagram</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Verifica se a largura da tela é menor ou igual a 768px (mobile)
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+        // Seleciona todas as imagens de Instagram
+        const instagramImages = document.querySelectorAll('.instagram-image');
+
+        // Adiciona o evento de clique em cada imagem
+        instagramImages.forEach((instagramImage) => {
+            instagramImage.addEventListener('click', function () {
+                // Alterna a classe 'clicked' no elemento de imagem do Instagram
+                instagramImage.classList.toggle('clicked');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+<!-- Navegação do Carrossel -->
+<div class="carousel-nav">
+    <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+   <!-- Seção Sobre -->
+<section id="sobre">
+    <div class="sobre-container">
+        <h2>Sobre o Studio</h2>
+        <p>Com anos de experiência, oferecemos as melhores tatuagens personalizadas. Nosso estúdio é um ambiente seguro e criativo, com profissionais qualificados para garantir que sua experiência seja única e especial.</p>
+        <a href="#contato" class="btn-sobre">Entre em contato</a>
+    </div>
+</section>
+
+
+    <!-- Seção Contato -->
+<section id="contato">
+    <div class="contato-container">
+        <h2>Entre em Contato</h2>
+        <p>Se você tem dúvidas, sugestões ou quer agendar uma consulta, preencha o formulário abaixo. Nossa equipe entrará em contato com você em breve.</p>
+        <form id="contato-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required placeholder="Deixe sua mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
+
+
+<!-- Rodapé -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="imagens/logoatr.png" alt="Studio de Tatuagem - Arte na Pele">
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Studio de Tatuagem - Arte na Pele. Todos os direitos reservados.</p>
+                <div class="footer-social-links">
+                    <a href="https://wa.me/19982118384?text=Ol%C3%A1%2C%20queria%20fazer%20um%20or%C3%A7amento%20de%20tatuagem%20com%20voc%C3%AA">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/atrtattoopiercing/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <div class="footer-nav-links">
+                <a href="/sobre">Sobre</a>
+                <a href="/contato">Contato</a>
+                <a href="/privacidade">Política de Privacidade</a>
+                <a href="/termos">Termos de Serviço</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

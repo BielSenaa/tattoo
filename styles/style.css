@@ -1,0 +1,989 @@
+/* Reset de Estilos para evitar conflitos entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ==================================================
+    Header - Cabeçalho
+================================================== */
+/* Header Styles */
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;  /* Isso mantém a logo à esquerda e o menu à direita */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo */
+.logo {
+    flex-shrink: 0;  /* Isso impede que a logo encolha */
+}
+
+.logo-img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Navegação */
+nav {
+    flex-grow: 1;  /* Isso faz a navegação ocupar o espaço restante, centralizando os links */
+    display: flex;
+    justify-content: center;  /* Centraliza os links horizontalmente */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* Menu Hamburguer (apenas em telas pequenas) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/* Logo */
+.logo-img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* Menu Hamburguer (visível apenas em telas pequenas) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/* Responsividade - Menus em telas menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Coloca logo e nav um abaixo do outro */
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Items de navegação empilhados */
+        gap: 15px; /* Espaçamento menor em telas menores */
+        margin-top: 15px;
+    }
+
+    .logo-img {
+        width: 120px; /* Ajusta o tamanho do logo em telas menores */
+    }
+}
+
+/* ==================================================
+    Seção Hero
+================================================== */
+.hero {
+    background-image: url(/imagens/planoatr1.jpeg); /* Substitua pela imagem do fundo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px; /* Maior espaçamento superior */
+    position: relative;
+    height: 100vh; /* Ocupa a altura total da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombras no texto para melhorar a legibilidade */
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Cor de destaque */
+    transform: scale(1.1); /* Efeito de aumento no botão */
+}
+
+.hero::before {
+    content: '';
+    background: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px); /* Blur no fundo */
+    z-index: -1; /* Para que o fundo não cubra o texto */
+}
+
+/* ==================================================
+    Seção Biografia
+================================================== */
+/* Seção Biografia */
+/* Estilo geral da seção */
+#biografia {
+    background-color: #fafafa;
+    padding: 60px 20px;
+    color: #333;
+    text-align: center;
+}
+
+.biografia-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Estilo para a biografia do tatuador */
+.biografia-tatuador, .biografia-piercing {
+    flex: 1 1 45%;
+    max-width: 550px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer; /* Indica que o elemento é interativo */
+}
+
+.biografia-foto {
+    flex-shrink: 0;
+    width: 30%;
+}
+
+.foto-tatuador, .foto-piercer {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.biografia-texto {
+    flex-grow: 1;
+    text-align: left;
+    display: none; /* Inicialmente oculto */
+}
+
+.biografia-texto h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.biografia-texto p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.biografia-texto p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Estilo para hover e clique nos itens */
+.biografia-tatuador:hover, .biografia-piercing:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.biografia-texto h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+/* Ajuste para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .biografia-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .biografia-tatuador, .biografia-piercing {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .biografia-texto h3 {
+        font-size: 22px;
+    }
+
+    .biografia-texto p {
+        font-size: 16px;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .biografia-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-tatuador {
+        max-width: 200px;
+    }
+
+    .biografia-texto {
+        font-size: 1.1em;
+    }
+}
+
+/* ==================================================
+    Seção Galeria
+================================================== */
+/* Estilos para a seção Galeria */
+#galeria {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#galeria h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Container do carrossel */
+.galeria-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para o carrossel */
+.galeria-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que as imagens quebrem em várias linhas no mobile */
+    position: relative;
+}
+
+/* Estilos para cada imagem na galeria */
+.galeria-imagem {
+    flex: 0 0 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /* Garante que o conteúdo não saia da borda arredondada */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.galeria-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem ocupe toda a área sem distorção */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito hover nas imagens */
+.galeria-imagem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para a imagem do Instagram */
+.instagram-image a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.instagram-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Camada escura com texto */
+.instagram-image a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Filme escuro */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.instagram-image a:hover::before {
+    opacity: 1; /* A camada escura aparece ao passar o mouse */
+}
+
+.instagram-image span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.instagram-image a:hover span {
+    opacity: 1; /* Texto aparece ao passar o mouse */
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    #galeria h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .galeria-carousel {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .galeria-imagem {
+        flex: 0 0 100%;
+        margin-bottom: 15px; /* Espaçamento entre as imagens */
+        transition: transform 0.2s ease-in-out;
+    }
+
+    /* Menos exagero no efeito de hover no mobile */
+    .galeria-imagem:hover {
+        transform: scale(1.02); 
+    }
+
+    /* Ajustes na última imagem para o Instagram */
+    .instagram-image a::before {
+        opacity: 1; /* Mantém a camada escura sempre visível no mobile */
+    }
+
+    .instagram-image span {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px 15px;
+        border-radius: 5px;
+        opacity: 1; /* Exibe sempre o texto no mobile */
+    }
+
+    /* Ajuste no link do Instagram - botão com animação */
+    .instagram-image a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .instagram-image a:hover {
+        transform: scale(1.05);
+    }
+
+    .instagram-image span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    /* Ajuste das margens e do layout */
+    .galeria-container {
+        padding: 0 15px;
+    }
+}
+
+/* Ajustes para dispositivos muito pequenos (até 480px) */
+@media screen and (max-width: 480px) {
+    #galeria h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .galeria-imagem {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+
+    .instagram-image span {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+/* Estilos para o texto da imagem do Instagram */
+.instagram-image span {
+    position: absolute;
+    bottom: 10px; /* Distância do fundo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para centralizar completamente */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none; /* Esconde o texto por padrão */
+}
+
+/* No hover de desktop, o texto aparece */
+.instagram-image a:hover span {
+    opacity: 1;
+    display: block;
+}
+
+/* Estilos específicos para mobile */
+@media screen and (max-width: 768px) {
+    .instagram-image span {
+        display: none; /* Garante que o texto esteja escondido no mobile por padrão */
+    }
+
+    /* No clique da imagem no mobile, o texto aparece */
+    .instagram-image.clicked span {
+        display: block;
+        opacity: 1;
+        bottom: 50%; /* Centraliza o texto verticalmente */
+        transform: translate(-50%, 50%); /* Ajusta a posição do texto para centralizar completamente */
+    }
+}
+
+
+
+
+
+/* ==================================================
+    Seção Sobre
+================================================== */
+/* Estilos para a seção Sobre */
+#sobre {
+    background: url('imagens/fundo-sobre.jpg') no-repeat center center/cover; /* Imagem de fundo */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adiciona uma camada escura sobre a imagem de fundo */
+#sobre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Escurece a imagem de fundo */
+    z-index: 1;
+}
+
+/* Container interno da seção */
+.sobre-container {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima da camada escura */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título da seção */
+#sobre h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #f39c12; /* Cor dourada ou laranja */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra para destacar o título */
+}
+
+/* Parágrafo de descrição */
+#sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Botão de CTA */
+.btn-sobre {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent; /* Adiciona borda invisível para transição suave */
+}
+
+.btn-sobre:hover {
+    background-color: #e67e22;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    border-color: #e67e22;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    #sobre h2 {
+        font-size: 36px;
+    }
+
+    #sobre p {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .btn-sobre {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}
+
+
+/* ==================================================
+    Seção Contato
+================================================== */
+/* Estilos para a seção Contato */
+#contato {
+    background-color: #f4f4f4;
+    padding: 100px 20px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+/* Container do formulário */
+.contato-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#contato h2 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#contato p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo para os campos de entrada e textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #ecf0f1;
+    font-family: 'Arial', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #696969;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #95a5a6;
+}
+
+/* Estilo para o botão de envio */
+.btn-enviar {
+    background-color: #DAA520;
+    color: #fff;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-enviar:hover {
+    background-color: 	#D2691E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-enviar:active {
+    background-color: 	#D2691E;
+    transform: translateY(2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    #contato h2 {
+        font-size: 32px;
+    }
+
+    #contato p {
+        font-size: 16px;
+    }
+
+    .contato-container {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .btn-enviar {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}
+
+
+
+/* ==================================================
+    Rodapé
+================================================== */
+/* Rodapé */
+footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    padding: 20px 0; /* Espaçamento interno */
+    font-family: Arial, sans-serif;
+}
+
+/* Container do rodapé */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Logo */
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Informações do rodapé */
+.footer-info {
+    margin-bottom: 20px;
+}
+
+/* Links sociais */
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Estilo para os ícones sociais */
+.footer-social-links a {
+    color: #fff; /* Cor dos ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animação suave */
+}
+
+/* Efeito de hover para os ícones */
+.footer-social-links a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone */
+    color: #25d366; /* Cor de hover para o WhatsApp */
+}
+
+/* Hover específico para o WhatsApp */
+.footer-social-links a[href*="wa.me"] {
+    color: #25d366; /* Cor verde do WhatsApp */
+}
+
+/* Hover específico para o Instagram */
+.footer-social-links a[href*="instagram.com"] {
+    color: #e1306c; /* Cor rosa do Instagram */
+}
+
+/* Navegação do rodapé */
+.footer-nav {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer-nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav-links a {
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de hover para os links de navegação */
+.footer-nav-links a:hover {
+    color: #ff5733; /* Cor de hover */
+}
+
+
+
+/* ==================================================
+    Responsividade para dispositivos móveis
+================================================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .whatsapp-btn {
+        font-size: 1em;
+        padding: 10px 18px;
+    }
+
+    .biografia-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .biografia-foto {
+        margin-bottom: 20px;
+    }
+
+    .biografia-texto {
+        max-width: 90%;
+    }
+}

@@ -212,7 +212,7 @@ nav {
     Seção Hero
 ================================================== */
 .hero {
-    background-image: url(/imagens/planoatr1.jpeg); /* Substitua pela imagem do fundo */
+    background-image: url(/imagens/planoATR.jpeg); /* Substitua pela imagem do fundo */
     background-size: cover;
     background-position: center;
     color: white;
